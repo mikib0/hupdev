@@ -1,3 +1,4 @@
+export { default as Navbar } from './Navbar';
 export { default as Hero } from './Hero';
 export { default as FirstJumbotron } from './FirstJumbotron';
 export { default as Features } from './Features';
