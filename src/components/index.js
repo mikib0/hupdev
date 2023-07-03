@@ -1,0 +1,9 @@
+export { default as Hero } from './Hero';
+export { default as FirstJumbotron } from './FirstJumbotron';
+export { default as Features } from './Features';
+export { default as SecondJumbotron } from './SecondJumbotron';
+export { default as Gallery } from './Gallery';
+export { default as Testimonials } from './Testimonials';
+export { default as ThirdJumbotron } from './ThirdJumbotron';
+export { default as NewsLetter } from './NewsLetter';
+export { default as Footer } from './Footer';
