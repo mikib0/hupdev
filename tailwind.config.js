@@ -1,13 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./src/**/*.{jsx}'],
+module.exports = {
+  content: ['./src/**/*.{jsx,css}', './index.html'],
   theme: {
-    colors: {
-      orange: '#FF5C00',
-      'orange-light': '#ffcbae',
-      gray: '#151515',
-      'gray-light': '#252525',
+    extend: {
+      colors: {
+        orange: '#FF5C00',
+        'orange-light': '#ffcbae',
+        gray: '#151515',
+        'gray-light': '#252525',
+      },
     },
   },
 };
-
