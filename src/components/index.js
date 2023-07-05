@@ -8,4 +8,5 @@ export { default as Testimonials } from './Testimonials';
 export { default as ThirdJumbotron } from './ThirdJumbotron';
 export { default as NewsLetter } from './NewsLetter';
 export { default as Footer } from './Footer';
+export { default as Button } from './Button';
 // export { default as Brand } from './Brand';
