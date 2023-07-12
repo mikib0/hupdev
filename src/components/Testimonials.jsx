@@ -1,5 +1,3 @@
-{/* TODO the font is not raleway in the design */}
-
 const Testimonial = ({author, role, text})=>(<div>
   <p className='text-sm mb-4'>{text}</p>
   <h3 className='font-medium text-base mb-2'>{author}</h3>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ContactInfo from './ContactInfo';
 import Brand from './Brand';
 
 const FooterLink = ({ children, to, ...rest }) => (
@@ -34,18 +35,7 @@ export default function Footer() {
           <FooterLink>{el}</FooterLink>
         ))}
       </div>
-      <div className='flex flex-col gap-3'>
-        <a href='mailto:info@hupdev.com' className='underline text-sm'>
-          info@hupdev.com
-        </a>
-        <a href='tel:+234 812 3456 3457' className='underline text-sm'>
-          +234 812 3456 3457
-        </a>
-        <a href='tel:+234 812 3456 3457' className='underline text-sm'>
-          +234 812 3456 3457
-        </a>
-        <p className='text-sm'>No 4, Ado Ekiti Close, Area 11, Abuja</p>
-      </div>
+      <ContactInfo />
       <hr className='my-8' />
       <p className='text-center text-sm mb-8'>© 2023 HupDev Technologies, All Rights Reserved.</p>
     </footer>

@@ -1,5 +1,3 @@
-import { paddingHorizontal } from '../constants';
-
 export default function NewsLetter() {
   return (
     <section

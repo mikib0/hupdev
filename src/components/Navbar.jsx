@@ -5,7 +5,7 @@ export default function () {
   return (
     <nav className={`flex items-center justify-between bg-transparent py-2 px-4`}>
       <Brand />
-      <FiMenu size={32} />
+      <FiMenu className='text-white' size={32} />
     </nav>
   );
 }
