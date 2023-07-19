@@ -15,3 +15,4 @@ export { default as ServicesList } from './ServicesList';
 export { default as FAQ } from './FAQ';
 export { default as ContactInfo } from './ContactInfo';
 export { default as TechIcons } from './TechIcons';
+export { default as BR } from './BR';

@@ -6,13 +6,13 @@ export default function () {
   return (
     <div className='text-white bg-gray'>
       <Navbar />
-      <div className='pt-12 pb-24 px-4'>
-        <h1 className='font-semibold text-4xl text-center mb-7'>FAQs</h1>
+      <div className='pt-12 md:pt-48 pb-24 md:pb-36 px-4 md:px-dx'>
+        <h1 className='font-semibold text-4xl md:text-6xl text-center mb-7'>FAQs</h1>
         {Object.entries(faqs).map(([category, catFaqs], i) => {
           return (
             <section>
               <h2
-                className={`text-sm font-normal m-0 ${i !== 0 ? 'mt-24' : ''}`}>
+                className={`text-sm md:text-cxl font-normal font-dm-sans m-0 ${i !== 0 ? 'mt-24' : ''}`}>
                 {category}
               </h2>
               {/* TODO (dm sans) */}

@@ -23,10 +23,12 @@ export default function () {
   return (
     <div className='bg-gray text-white'>
       <Navbar />
-      <section className='py-12 px-4'>
-        <h1 className='font-semibold text-3xl mb-4'>Let's work together!</h1>
-        <ContactInfo />
-        <form className='mt-10'>
+      <section className='py-12 md:pt-24 md:pb-48 px-4 md:px-[208px] md:flex md:gap-24 md:justify-between'>
+        <div className='md:pt-6'>
+          <h1 className='font-semibold text-3xl mb-4 md:mb-0'>Let's work together!</h1>
+          <ContactInfo />
+        </div>
+        <form className='mt-10 md:mt-0 md:w-[438px]'>
           <TextInput placeholder='Name' />
           <TextInput placeholder='Email' />
           <TextInput placeholder='Phone' />

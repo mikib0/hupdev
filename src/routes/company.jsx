@@ -1,69 +1,87 @@
 import { team } from '../constants';
 import { BsArrowRightShort } from 'react-icons/bs';
-import { Navbar, TechIcons, ThirdJumbotron } from '../components';
+import { BR, Navbar, TechIcons, ThirdJumbotron } from '../components';
+
+const TeamMember = ({ member: { avatar, name, title } }) => (
+  <div className='flex flex-col items-center'>
+    <img src={avatar} className='mb-4' />
+    <h4 className='text-2xl font-semibold mb-1'>{name}</h4>
+    <p className='text-lg'>{title}</p>
+  </div>
+);
 
 export default function () {
   return (
     <div className='bg-gray text-white'>
       <Navbar />
-      <div className='px-4'>
-        <section className='py-12'>
-          <h1 className='text-[28px] font-semibold text-center mb-8'>
-            Empowering Business Growth Across the Globe
+      <div>
+        <section className='py-12 md:pt-24 md:pb-12 px-4 md:px-[165px]'>
+          <h1 className='text-[28px] md:text-5xl font-semibold text-center mb-8'>
+            Empowering Business Growth <BR /> Across the Globe
           </h1>
-          <img src='/map.png' className='mx-auto mb-6' />
-          <p className='text-center text-sm'>
+          <img src='/map.png' className='mx-auto mb-6 md:hidden' />
+          <img src='/map_d.png' className='hidden md:my-[75px]  md:block' />
+          <p className='text-center text-sm md:text-cxl'>
             HupDev Technologies is a leading software design and development
             agency, committed to delivering cutting-edge solutions that drive
             business growth . With a global presence and a team of experts, we
             provide innovative and customized solutions to clients worldwide.
           </p>
         </section>
-        <section className='py-24'>
-          <h2 className='text-[1.4rem] font-semibold mb-4'>
-            Ready to Drive Business Growth with Innovative Software Solutions?
-          </h2>
-          <p className='text-sm mb-4'>
-            HupDev Technologies was founded with a mission to empower businesses
-            with innovative software solutions that drive growth and success.
-            Since our inception, we have worked with clients across various
-            industries, providing them with cutting-edge software design and
-            development services.
-          </p>
-          <p className='text-sm mb-4'>
-            As an international company, we have a global presence and work with
-            clients from all over the world. We take pride in our diverse team,
-            which is made up of experts from different backgrounds and cultures.
-            Together, we bring a wealth of knowledge and expertise to every
-            project we undertake.
-          </p>
-          <p className='text-sm'>
-            At HupDev Technologies, we believe in empowering businesses with the
-            technology they need to achieve their goals.
-          </p>
+        <section className='py-24 md:pt-48 md:mb-[300px] md:pb-0 px-4 md:px-[165px]'>
+          <div className='md:flex md:gap-6 md:justify-between md:items-start'>
+            <h2 className='text-[1.4rem] md:text-[40px] md:leading-[46.96px] font-semibold mb-4 md:w-7/12'>
+              Ready to Drive Business <BR /> Growth with Innovative <BR />
+              Software Solutions?
+            </h2>
+            <div className='md:w-9/12'>
+              <p className='text-sm md:text-cxl mb-4'>
+                HupDev Technologies was founded with a mission to empower
+                businesses with innovative software solutions that drive growth
+                and success. Since our inception, we have worked with clients
+                across various industries, providing them with cutting-edge
+                software design and development services.
+              </p>
+              <p className='text-sm md:text-cxl mb-4'>
+                As an international company, we have a global presence and work
+                with clients from all over the world. We take pride in our
+                diverse team, which is made up of experts from different
+                backgrounds and cultures. Together, we bring a wealth of
+                knowledge and expertise to every project we undertake.
+              </p>
+              <p className='text-sm md:text-cxl'>
+                At HupDev Technologies, we believe in empowering businesses with
+                the technology they need to achieve their goals.
+              </p>
+            </div>
+          </div>
         </section>
-        <section className='py-24'>
+        <section className='py-24 md:pt-0 md:pb-[300px] md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-7 px-4 md:px-[165px]'>
           <div>
-            <h2 className='text-2xl font-semibold mb-4'>Our Mission</h2>
-            <p className='text-sm mb-10'>
+            <h2 className='text-2xl font-semibold mb-4 md:text-[40px] md:leading-[46.96px]'>
+              Our Mission
+            </h2>
+            <p className='text-sm md:text-cxl mb-10 md:mb-0'>
               To deliver world class IT services which fully satisfies the
               desired needs of our clients and provide value for their end
               users.
             </p>
           </div>
           <div>
-            <h2 className='text-2xl font-semibold mb-4'>Our Vision</h2>
-            <p className='text-sm mb-10'>
+            <h2 className='text-2xl font-semibold mb-4 md:text-[40px] md:leading-[46.96px]'>
+              Our Vision
+            </h2>
+            <p className='text-sm md:text-cxl mb-10'>
               To be world’s number one solution-driven software company from
               Africa with proven products and services that yields value in
               different areas of life and works.
             </p>
           </div>
-          <div>
-            <h2 className='text-2xl font-semibold mb-4'>
+          <div className='row-span-2 row-start-1 col-start-2'>
+            <h2 className='text-2xl font-semibold mb-4 md:text-[40px] md:leading-[46.96px]'>
               In whatever we do, we aim to create solutions
             </h2>
-            <p className='text-sm'>
+            <p className='text-sm md:text-cxl'>
               We are committed to delivering exceptional customer service and
               building long-term partnerships with our clients. Our agile
               development processes, innovation-driven solutions, and focus on
@@ -73,14 +91,16 @@ export default function () {
             </p>
           </div>
         </section>
-        <section className='py-24 bg-gray-light -mx-4 px-4'>
-          <div className='text-center mb-7'>
-            <h2 className='text-[28px] font-semibold mb-2'>
+        <section className='py-24 md:pt-36 md:pb-60 bg-gray-light px-4 md:px-dx'>
+          <div className='text-center mb-7 md:mb-12'>
+            <h2 className='text-[28px] font-semibold mb-2 md:mb-4 md:text-12 md:leading-[56.35px]'>
               We are driven by values that truly matter
             </h2>
-            <p className='text-sm'>We call them the 3 Is and an S</p>
+            <p className='text-sm md:text-cxl'>
+              We call them the 3 Is and an S
+            </p>
           </div>
-          <div className='flex flex-col gap-7'>
+          <div className='flex flex-col md:flex-row gap-7'>
             {[
               {
                 h: 'Integrity',
@@ -106,39 +126,51 @@ export default function () {
             ))}
           </div>
         </section>
-        <section className='pt-24'>
+        <section className='pt-24 md:pt-37'>
           <div className='text-center'>
-            <h2 className='text-2xl font-semibold mb-2'>Meet the team</h2>
-            <p className='text-sm mb-10'>
+            <h2 className='text-2xl font-semibold mb-2 md:mb-4 md:text-12 md:leading-[56.35px]'>
+              Meet the team
+            </h2>
+            <p className='text-sm mb-10 md:text-cxl'>
               Meet our talented team of professionals. From project managers to
-              developers, designers to QA specialists, we work together to
-              deliver top-notch software design and development services for
-              your business.
+              developers, designers <BR /> to QA specialists, we work together
+              to deliver top-notch software design and development
+              <BR /> services for your business.
             </p>
           </div>
-          <div className='flex flex-col gap-8'>
-            {team.slice(0, 3).map(({ avatar, name, title }) => (
-              <div className='flex flex-col items-center'>
-                <img src={avatar} className='mb-4' />
-                <h4 className='text-2xl font-semibold mb-1'>{name}</h4>
-                <p className='text-lg'>{title}</p>
-              </div>
-            ))}
+          <div className='md:flex md:flex-col md:gap-9 md:items-center'>
+            <div className='flex flex-col md:flex-row gap-8 md:gap-9'>
+              {team.slice(0, 3).map((member) => (
+                <TeamMember member={member} />
+              ))}
+            </div>
+            <div className='hidden md:flex flex-row gap-9'>
+              {team.slice(3, 8).map((member) => (
+              <TeamMember member={member} />
+              ))}
+            </div>
+            <div className='hidden md:flex flex-row gap-9'>
+              {team.slice(8).map((member) => (
+              <TeamMember member={member} />
+              ))}
+            </div>
           </div>
-          <button className='text-orange text-sm font-medium mx-auto flex items-center gap-2 mt-8'>
+          <button className='text-orange text-sm font-medium mx-auto flex items-center gap-2 mt-8 md:hidden'>
             <span>View full team</span>
             <BsArrowRightShort size={32} />
           </button>
-          <TechIcons />
+          <div className='md:px-56'>
+            <TechIcons />
+          </div>
         </section>
-        <section className='-mx-4'>
+        <section className='-mx-4 md:mx-0 md:grid md:grid-cols-4'>
           {[
             'Rectangle 171.png',
             'Rectangle 172.png',
-            'Rectangle 173.png',
             'Rectangle 170.png',
+            'Rectangle 173.png',
           ].map((src) => (
-            <img src={'/' + src} className='w-full' />
+            <img src={'/' + src} className='object-contain' />
           ))}
         </section>
         <ThirdJumbotron />

@@ -14,7 +14,7 @@ const Feature = ({ feat: { icon, title, desc } }) => (
 
 export default function Features() {
   return (
-    <div className='py-16 flex flex-col gap-8'>
+    <div className='py-16 flex flex-col gap-8 md:flex-row'>
       {features.map((item) => (
         <Feature feat={item} key={item.title} />
       ))}
