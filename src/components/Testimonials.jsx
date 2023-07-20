@@ -26,8 +26,6 @@ export default function Testimonials() {
   const mdQuery = window.matchMedia('(min-width: 768px)');
   const [isDesktop, setIsDesktop] = useState(mdQuery.matches);
 
-  console.log(isDesktop);
-
   useEffect(() => {
     const handleChange = (query) => setIsDesktop(query.matches);
     mdQuery.addListener(handleChange);
@@ -36,7 +34,9 @@ export default function Testimonials() {
 
   return (
     <section className='py-24 bg-gray-light px-4 md:px-dx'>
-      <h2 className='text-2xl font-medium mb-2'>What our clients are saying</h2>{' '}
+      <h2 className='text-[28px] font-medium mb-2 font-dm-sans'>
+        What our clients are saying
+      </h2>{' '}
       {/* TODO 28px! */}
       <p className='text-sm mb-8'>Here are what our clients say about us</p>
       <Carousel
@@ -50,7 +50,7 @@ export default function Testimonials() {
         showThumbs={false}
         onChange={(i) => setSelectedItemIndex(i)}
         renderIndicator={() => null}>
-        {testimonials.map(({author, role, text}, i) => (
+        {testimonials.map(({ author, role, text }, i) => (
           <Testimonial
             mrZero={i == selectedItemIndex + 1}
             author={author}
