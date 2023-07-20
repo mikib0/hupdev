@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import ContactInfo from './ContactInfo';
 import Brand from './Brand';
 
-const FooterLink = ({ children, to, ...rest }) => (
+const FooterLink = ({ children, href, ...rest }) => (
   <Link
-    to={to ?? children}
+    to={href ?? children}
     className='font-normal text-sm mt-2 md:mt-8 block'
     {...rest}>
     {children[0].toUpperCase() + children.substring(1)}
@@ -34,8 +34,22 @@ export default function Footer() {
         </div>
         <div className='my-8 md:mt-0'>
           <h5 className='font-semibold text-base md:text-lg'>Socials</h5>
-          {['facebook', 'instagram', 'twitter', 'linkedIn'].map((el) => (
-            <FooterLink>{el}</FooterLink>
+          {[
+            {
+              platform: 'facebook',
+              href: 'https://web.facebook.com/hupdev',
+            },
+            {
+              platform: 'instagram',
+              href: 'https://instagram.com/hupdevtech',
+            },
+            { platform: 'twitter', href: 'https://twitter.com/Hupdevtech' },
+            {
+              platform: 'linkedIn',
+              href: 'https://ng.linkedin.com/company/hupdev',
+            },
+          ].map(({ platform, href }) => (
+            <FooterLink href={href}>{platform}</FooterLink>
           ))}
         </div>
         <ContactInfo />
