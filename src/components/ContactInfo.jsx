@@ -7,12 +7,12 @@ const ContactInfo = () => {
         info@hupdev.com
       </a>
       <div>
-      <a href='tel:+234 812 3456 3457' className='underline text-sm'>
-        +234 812 3456 3457
-      </a>
-      <a href='tel:+234 812 3456 3457' className='underline text-sm'>
-        +234 812 3456 3457
-      </a>
+        <a href='tel:+234 812 3456 3457' className='underline text-sm'>
+          +234 812 3456 3457
+        </a>{' '}
+        <a href='tel:+234 812 3456 3457' className='underline text-sm'>
+          +234 812 3456 3457
+        </a>
       </div>
       <p className='text-sm underline'>No 4, Ado Ekiti Close, Area 11, Abuja</p>
     </div>

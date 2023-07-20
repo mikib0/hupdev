@@ -4,6 +4,7 @@ import pic3 from '../assets/gallery_pic3.png'
 import pic4 from '../assets/gallery_pic4.png'
 
 import {BsArrowRightShort} from 'react-icons/bs'
+import { Link } from 'react-router-dom';
 
 export default function Gallery() {
   return (
@@ -25,9 +26,11 @@ export default function Gallery() {
           />
         </div>
       ))}
-      <button className='bg-orange absolute right-1/2 translate-x-1/2 -bottom-4 text-black font-medium text-sm px-4 py-2 flex items-center justify-between'>
+      <Link
+        to='/projects'
+        className='bg-orange absolute right-1/2 translate-x-1/2 -bottom-4 text-black font-medium text-sm px-4 py-2 flex items-center justify-between'>
         <span>See Projects</span> <BsArrowRightShort size={16} />
-      </button>
+      </Link>
     </section>
   );
 }

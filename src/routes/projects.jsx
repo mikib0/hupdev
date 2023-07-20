@@ -11,7 +11,6 @@ import {
   ProjectsFilter,
   ThirdJumbotron,
 } from '../components';
-// TODO work on the gallery pics
 
 export default function () {
   return (
@@ -31,7 +30,7 @@ export default function () {
           <img src={pic} alt={'pic' + i} key={'pic' + i} />
         ))}
       </section>
-      <section className='hidden md:grid md:grid-cols-[371px_371px_371px] md:grid-rows-[420px_420px_420px_420px] gap-4 w-auto mx-auto'>
+      <section className='hidden md:grid md:grid-cols-[371px_371px_371px] md:grid-rows-[420px_420px_420px_420px] gap-4 w-auto mx-auto justify-center'>
         {[
           { img: uberzoomedout, span2: false },
           { img: pic3, span2: false },
@@ -49,7 +48,7 @@ export default function () {
               src={img}
               alt={'pic' + i}
               key={'pic' + i}
-              className='h-full w-full'
+              className='h-full w-full object-cover'
             />
           </div>
         ))}
