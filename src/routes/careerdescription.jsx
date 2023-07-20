@@ -1,31 +1,39 @@
+import axios from 'axios';
 import { useLoaderData } from 'react-router-dom';
 import { Navbar } from '../components';
-import { jobs } from '../constants';
+import { API } from '../constants';
 
-export function loader({ params }) {
-  return jobs[params.id - 1];
+export async function loader({ params }) {
+  const response = await axios.get(API + '/getCareerDetails/' + params.id);
+  return response.data.data;
 }
 
 export default function () {
-  const { role, type, location, overview, responsibilities, requirements } =
-    useLoaderData();
+  const {
+    title,
+    jobType,
+    jobLocation,
+    jobOverview,
+    jobResponsibilities,
+    jobRequirements,
+  } = useLoaderData();
   return (
     <div className='bg-gray text-white'>
       <Navbar />
       <div className='px-4 pt-12 pb-24 md:px-dx'>
         <h1 className='font-semibold text-3xl md:text-5xl mb-3 text-center capitalize'>
-          {role}
+          {title}
         </h1>
-        <p className='flex items-center justify-center gap-4 mb-7'>
+        <div className='flex items-center justify-center gap-4 mb-7'>
           <div className='flex items-center gap-2 text-sm md:text-base'>
             <img src='/material-symbols_work-outline.png' />
-            <span className='font-medium capitalize'>{type}</span>
+            <span className='font-medium capitalize'>{jobType}</span>
           </div>
           <div className='flex items-center gap-2 text-sm md:text-base'>
             <img src='/material-symbols_nest-remote-comfort-sensor-outline.png' />
-            <span className='font-medium capitalize'>{location}</span>
+            <span className='font-medium capitalize'>{jobLocation}</span>
           </div>
-        </p>
+        </div>
         <div className='font-medium text-sm md:text-cxl'>
           <p className='mb-6'>
             Company Overview:
@@ -42,13 +50,13 @@ export default function () {
           <p className='mb-6'>
             Job Overview:
             <br />
-            {overview}
+            {jobOverview}
           </p>
           <p className='mb-6'>
             Responsibilities:
             <br />
             <ul className='list-disc pl-8'>
-              {responsibilities.map((item) => (
+              {jobResponsibilities.map((item) => (
                 <li>{item}</li>
               ))}
             </ul>
@@ -56,7 +64,7 @@ export default function () {
           <p className='mb-6'>
             Requirements: <br />
             <ul className='list-disc pl-8'>
-              {requirements.map((item) => (
+              {jobRequirements.map((item) => (
                 <li>{item}</li>
               ))}
             </ul>

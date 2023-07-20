@@ -132,57 +132,6 @@ export const team = [
   },
 ];
 
-export const jobs = [
-  {
-    id: 1,
-    role: 'junior product designer',
-    type: 'full-time',
-    location: 'remote',
-    shortDesc:
-      'We are seeking a talented and creative Product Designer to join our team',
-    overview:
-      'We are seeking a talented and experienced Product Designer to join our team. The ideal candidate is passionate about creating beautiful, intuitive, and user-friendly products that meet the needs and expectations of our clients and their end-users. In this role, you will work closely with our clients, product managers, and development team to understand their requirements, develop user-centric design solutions, and create wireframes, prototypes, and high-fidelity mockups. You will also be responsible for conducting user research and testing, gathering feedback, and iterating on your designs to continuously improve the user experience.',
-    responsibilities: [
-      'Collaborate with clients, product managers, and development team to define product requirements and user stories',
-      'Conduct user research and testing to gain insights into user needs, behavior, and preferences',
-      'Develop user-centric design solutions that meet the needs and expectations of the users and the business',
-      'Create wireframes, prototypes, and high-fidelity mockups using design tools such as Sketch, Figma, or Adobe Creative Suite',
-      'Work with the development team to ensure the design is implemented correctly and meets the design specifications',
-      'Gather feedback from users, stakeholders, and team members and iterate on designs to improve the user experience',
-      'Stay up-to-date with the latest design trends, tools, and techniques and share your knowledge with the team',
-    ],
-    requirements: [
-      "Bachelor's degree in design, human-computer interaction, or a related field 3+ years of experience in product design or a related field",
-      'Strong portfolio showcasing your design process, user-centered design approach, and problem-solving skills',
-      'Proficiency in design tools such as Sketch, Figma, or Adobe Creative Suite',
-      'Experience with user research and testing, including usability testing, A/B testing, and user interviews',
-      'Excellent communication and collaboration skills',
-      'Ability to work in a fast-paced and dynamic environment',
-      'Understanding of software development processes and technologies is a plus',
-    ],
-  },
-  {
-    id: 2,
-    role: 'Junior Graphic Designer',
-    type: 'full-time',
-    location: 'remote',
-    shortDesc:
-      'We are seeking a talented and creative Graphic Designer to join our team',
-    overview:
-      'We are seeking a talented and experienced Product Designer to join our team. The ideal candidate is passionate about creating beautiful, intuitive, and user-friendly products that meet the needs and expectations of our clients and their end-users. In this role, you will work closely with our clients, product managers, and development team to understand their requirements, develop user-centric design solutions, and create wireframes, prototypes, and high-fidelity mockups. You will also be responsible for conducting user research and testing, gathering feedback, and iterating on your designs to continuously improve the user experience.',
-  },
-  {
-    id: 3,
-    role: 'Junior Frontend Developer',
-    type: 'full-time',
-    location: 'remote',
-    shortDesc:
-      'We are seeking a talented and creative Frontend Developer to join our team',
-    overview:
-      'We are seeking a talented and experienced Product Designer to join our team. The ideal candidate is passionate about creating beautiful, intuitive, and user-friendly products that meet the needs and expectations of our clients and their end-users. In this role, you will work closely with our clients, product managers, and development team to understand their requirements, develop user-centric design solutions, and create wireframes, prototypes, and high-fidelity mockups. You will also be responsible for conducting user research and testing, gathering feedback, and iterating on your designs to continuously improve the user experience.',
-  },
-];
-
 export const features = [
   {
     icon: (
@@ -257,3 +206,5 @@ export const features = [
     desc: 'Promoting and advertising solutions to potential customers',
   },
 ];
+
+export const API = 'https://hupdev-web-beckend-5ed0d0ddc8d3.herokuapp.com/api';

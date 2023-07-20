@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { API } from '../constants';
 
 export default function NewsLetter() {
   const [email, setEmail] = useState('');
@@ -21,7 +22,7 @@ export default function NewsLetter() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder='Email Address'
           type='email'
-          className='border-[1px] placeholder:text-gray-light w-full md:w-[328px] border-gray-light bg-transparent font-medium text-sm capitalize py-2 px-3 mt-5 mb-3 md:m-0'
+          className='border-[1px] placeholder:text-gray-light w-full md:w-[328px] border-gray-light bg-transparent font-medium text-sm capitalize py-2 px-3 mt-5 mb-3 md:m-0 focus:outline-none'
         />
         {/* TODO create a custom border for 1px */}
         <button

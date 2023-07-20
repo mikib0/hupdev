@@ -1,10 +1,20 @@
-import { useState } from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BR, Navbar } from '../components';
-import { jobs } from '../constants';
+import { API } from '../constants';
 
 export default function () {
-  const [jobsAvailable] = useState(Date.now() % 2);
+  const [jobs, setJobs] = useState([]);
+  const jobsAvailable = jobs.length !== 0;
+
+  useEffect(() => {
+    (async () => {
+      const response = await axios.get(API + '/getAllCareer');
+      setJobs(response.data.data);
+    })();
+  }, []);
+
   return (
     <div className='text-white bg-gray'>
       <Navbar />
@@ -31,31 +41,33 @@ export default function () {
           your interest in joining our team!
         </p>
         <section className='pt-14 md:pt-24 flex gap-2 md:gap-7 flex-wrap md:flex-nowrap'>
-          {true ? (
-            jobs.map(({ id, role, type, location, shortDesc }) => (
-              <Link to={'/careers/' + id}>
-                <div className='border-2 border-white p-5 basis-[370px]'>
-                  <h2 className='capitalize font-semibold text-lg mb-2 md:mb-3 md:text-[24px] md:leading-[28.18px]'>
-                    {role}
-                  </h2>
-                  <p className='flex items-center gap-4 mb-2 md:mb-3'>
-                    <div className='flex items-center gap-2'>
-                      <img src='/material-symbols_work-outline.png' />
-                      <span className='font-medium text-sm capitalize'>
-                        {type}
-                      </span>
-                    </div>
-                    <div className='flex items-center gap-2'>
-                      <img src='/material-symbols_nest-remote-comfort-sensor-outline.png' />
-                      <span className='font-medium text-sm capitalize'>
-                        {location}
-                      </span>
-                    </div>
-                  </p>
-                  <p className='text-sm md:text-cxl'>{shortDesc}</p>
-                </div>
-              </Link>
-            ))
+          {jobsAvailable ? (
+            jobs.map(
+              ({ jobId, title, jobType, jobLocation, shortDescription }) => (
+                <Link to={'/careers/' + jobId}>
+                  <div className='border-2 border-white p-5 basis-[370px]'>
+                    <h2 className='capitalize font-semibold text-lg mb-2 md:mb-3 md:text-[24px] md:leading-[28.18px]'>
+                      {title}
+                    </h2>
+                    <p className='flex items-center gap-4 mb-2 md:mb-3'>
+                      <div className='flex items-center gap-2'>
+                        <img src='/material-symbols_work-outline.png' />
+                        <span className='font-medium text-sm capitalize'>
+                          {jobType}
+                        </span>
+                      </div>
+                      <div className='flex items-center gap-2'>
+                        <img src='/material-symbols_nest-remote-comfort-sensor-outline.png' />
+                        <span className='font-medium text-sm capitalize'>
+                          {jobLocation}
+                        </span>
+                      </div>
+                    </p>
+                    <p className='text-sm md:text-cxl'>{shortDescription}</p>
+                  </div>
+                </Link>
+              )
+            )
           ) : (
             <p className='text-center text-sm md:text-cxl w-full'>
               There are no job openings at the moment.
