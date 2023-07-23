@@ -16,7 +16,7 @@ export default function ({ job }) {
   return (
     <div className='bg-gray text-white'>
       <Navbar bg='bg-gray' />
-      <div className='px-4 pt-12 pb-24 md:px-dx'>
+      <div className='px-4 pt-24 md:pt-12 pb-24 md:px-dx'>
         <h1 className='font-semibold text-3xl md:text-5xl mb-3 text-center capitalize'>
           {title}
         </h1>
