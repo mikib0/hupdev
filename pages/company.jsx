@@ -24,7 +24,7 @@ const TeamMember = ({ member: { avatar, name, title } }) => (
 export default function () {
   return (
     <div className='bg-gray text-white'>
-      <Navbar />
+      <Navbar bg='bg-gray' />
       <div>
         <section className='py-24 md:pt-24 md:pb-12 px-4 md:px-[165px]'>
           <h1

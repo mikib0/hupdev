@@ -10,7 +10,7 @@ export default function ({ jobs }) {
 
   return (
     <div className='text-white bg-gray'>
-      <Navbar />
+      <Navbar bg='bg-gray' />
       <div className='pt-24 pb-24 px-4 md:px-dx'>
         <h1
           className='font-semibold text-3xl md:text-5xl text-center mb-7 md:mb-5'

@@ -10,7 +10,7 @@ import Image from 'next/image';
 export default function () {
   return (
     <div className='bg-gray'>
-      <Navbar />
+      <Navbar bg='bg-gray' />
       <ProjectsFilter />
       <section className='py-24 md:py-44 px-4 md:px-dx' data-aos='slide-right'>
         <Paragraph title='Experience our solutions'>

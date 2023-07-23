@@ -14,8 +14,8 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div className='text-white bg-black'>
-      <Navbar />
-      <section className='px-4 md:px-dx pt-16 pb-3'>
+      <Navbar bg='bg-black' />
+      <section className='px-4 md:px-dx pt-24 md:pt-16 pb-3'>
         <div className='flex gap-40 items-center'>
           <div data-aos='fade-left'>
             <h1 className='font-semibold text-4xl'>

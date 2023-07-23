@@ -1,12 +1,11 @@
 import React from 'react';
 import { Navbar, Paragraph, ThirdJumbotron } from '../components';
-import livedata from '../assets/livedata.png';
 import Image from 'next/image';
 
 export default function () {
   return (
     <div className='px-4 bg-gray text-white'>
-      <Navbar />
+      <Navbar bg='bg-gray' />
       <Paragraph
         title='UrbanDrive'
         text='Software Development'
