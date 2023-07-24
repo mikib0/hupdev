@@ -22,7 +22,8 @@ export default function App({ Component, pageProps }) {
         />
       </Head>
       <Component {...pageProps} />
-      <Footer />
+      {router.pathname !== '/contact' && <NewsLetter />}
+      {router.pathname !== '/contact' && <Footer />}
     </>
   );
 }
