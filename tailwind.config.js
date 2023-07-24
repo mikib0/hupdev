@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-   content: [
+  content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './constants/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -22,10 +22,10 @@ module.exports = {
       fontSize: {
         cxl: ['1.2rem', { lineHeight: '1.8rem' }],
       },
-      fontFamily: { 
+      fontFamily: {
         raleway: ['Raleway', 'sans-serif'],
-        'dm-sans': ['DM Sans', 'sans-serif']
-      }
+        'dm-sans': ['DM Sans', 'sans-serif'],
+      },
     },
   },
 };
