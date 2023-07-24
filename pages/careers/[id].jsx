@@ -1,7 +1,5 @@
 import axios from 'axios';
 import Image from 'next/image';
-import { useLoaderData } from 'react-router-dom';
-import { Navbar } from '@components';
 import { API } from '@constants';
 
 export default function ({ job }) {
@@ -15,7 +13,6 @@ export default function ({ job }) {
   } = job;
   return (
     <div className='bg-gray text-white'>
-      <Navbar bg='bg-gray' />
       <div className='px-4 pt-24 md:pt-12 pb-24 md:px-dx'>
         <h1 className='font-semibold text-3xl md:text-5xl mb-3 text-center capitalize'>
           {title}

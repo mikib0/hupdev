@@ -3,7 +3,6 @@ import {
   LinkButton,
   Features,
   Gallery,
-  Navbar,
   SecondJumbotron,
   TechIcons,
   Testimonials,
@@ -14,7 +13,6 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div className='text-white bg-black'>
-      <Navbar bg='bg-black' />
       <section className='px-4 md:px-dx pt-24 md:pt-16 pb-3'>
         <div className='flex gap-40 items-center'>
           <div data-aos='fade-left'>

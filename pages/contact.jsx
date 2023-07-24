@@ -1,4 +1,4 @@
-import { ContactInfo, Navbar } from '../components';
+import { ContactInfo } from '../components';
 
 const TextInput = ({ placeholder, ...rest }) => (
   <input
@@ -23,7 +23,6 @@ const Select = ({ label, options }) => (
 export default function () {
   return (
     <div className='bg-gray text-white'>
-      <Navbar bg='bg-gray' />
       <section className='py-24 md:pt-24 md:pb-48 px-4 md:px-[208px] md:flex md:gap-24 md:justify-between'>
         <div className='md:pt-6'>
           <h1

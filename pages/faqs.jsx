@@ -1,11 +1,10 @@
 import React from 'react';
-import { FAQ, Navbar } from '@components';
+import { FAQ } from '@components';
 import { faqs } from '@constants';
 
 export default function () {
   return (
     <div className='text-white bg-gray'>
-      <Navbar bg='bg-gray' />
       <div className='pt-24 md:pt-48 pb-24 md:pb-36 px-4 md:px-dx'>
         <h1 className='font-semibold text-4xl md:text-6xl text-center mb-7'>
           FAQs

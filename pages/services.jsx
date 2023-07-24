@@ -4,7 +4,6 @@ import {
   MapImage,
   Features,
   Gallery,
-  Navbar,
   ServicesList,
   ThirdJumbotron,
 } from '../components';
@@ -13,7 +12,6 @@ import { faqs } from '../constants';
 export default function () {
   return (
     <div className='bg-gray text-white'>
-      <Navbar bg='bg-gray' />
       <section className='px-4 pt-24 md:px-dx'>
         <h1
           className='text-[24px] md:text-5xl font-semibold -mb-9 md:mb-4 text-center'
