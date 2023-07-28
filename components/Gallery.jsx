@@ -17,7 +17,7 @@ export default function Gallery() {
           height={216}
           alt={'pic' + i}
           key={'pic' + i}
-          className='object-cover md:hidden'
+          className='object-cover md:hidden mx-auto'
           data-aos='zoom-in'
         />
       ))}
