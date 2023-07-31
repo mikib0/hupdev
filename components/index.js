@@ -17,3 +17,4 @@ export { default as ContactInfo } from './ContactInfo';
 export { default as TechIcons } from './TechIcons';
 export { default as BR } from './BR';
 export { default as MapImage } from './MapImage';
+export { default as Toast } from './Toast';

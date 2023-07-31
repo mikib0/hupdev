@@ -1,9 +1,13 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { API } from '../constants';
+import { Toast } from '@components';
+import { useShowToast } from '@hooks';
 
 export default function NewsLetter() {
   const [email, setEmail] = useState('');
+  const [showToast, showToastHandler] = useShowToast();
+
   return (
     <section
       className={`flex flex-col justify-start md:flex-row md:justify-between md:gap-32 md:items-center bg-orange-light text-xl py-8 px-4 md:px-dx`}>
@@ -28,12 +32,15 @@ export default function NewsLetter() {
         <button
           className='bg-gray-light block w-full md:w-auto py-4 md:py-3 md:px-6 text-white text-sm'
           onClick={async () => {
+            if (email.length < 1) return;
             await axios.post(API + '/register-newsletter', { email });
             setEmail('');
+            showToastHandler();
           }}>
           Subscribe
         </button>
       </div>
+      {showToast && <Toast text="You're subscribed!" />}
     </section>
   );
 }

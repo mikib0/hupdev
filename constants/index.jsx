@@ -208,3 +208,34 @@ export const features = [
 ];
 
 export const API = 'https://hupdev-web-beckend-5ed0d0ddc8d3.herokuapp.com/api';
+
+export const projectTypes = [
+  'E-commerce Website',
+  'Content Management System (CMS)',
+  'Social Media Application',
+  'Online Learning Platform',
+  'Customer Relationship Management (CRM) System',
+  'Inventory Management System',
+  'Booking and Reservation System',
+  'Real Estate Listing Website',
+  'Financial Management Application',
+  'Travel and Tourism Website/App',
+  'Health and Fitness Application',
+  'Gaming Application',
+  'News Aggregator',
+  'Event Management System',
+  'Food Delivery Application',
+  'Crowdfunding Platform',
+  'IoT (Internet of Things) Integration',
+  'Job Portal',
+  'Blogging Platform',
+  'Blockchain-Based Application',
+  'Other',
+];
+
+export const budgets = [
+  'under N1,000,000',
+  'N1,000,000 - N5,000,000',
+  'N5,000,000 - N10,000,000',
+  'N10,000,000+',
+];

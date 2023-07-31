@@ -1,11 +1,10 @@
 import React from 'react';
-import { Navbar, Paragraph, ThirdJumbotron } from '../components';
+import { Paragraph, ThirdJumbotron } from '../components';
 import Image from 'next/image';
 
 export default function () {
   return (
     <div className='px-4 bg-gray text-white'>
-      <Navbar bg='bg-gray' />
       <Paragraph
         title='UrbanDrive'
         text='Software Development'
